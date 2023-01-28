@@ -1,0 +1,12 @@
+.cart{
+    color: #888;
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-decoration-color: #a9a9a9;
+}
+.cart:hover{
+    color: #bbb;
+}
+.main{
+    background-image: url("public\\image\\backgrounds\\close-up-view-of-chocolate-cake-concept.jpg");
+}

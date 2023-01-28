@@ -1,0 +1,53 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    margin: 5vh 5vw;
+    padding: 5vh 5vw;
+    background-color: #FFF2F2;
+}
+.top{
+    display: flex;
+    flex-direction: row;
+}
+.top img{
+    max-width: 30vw;
+    max-height: 50vh;
+}
+.info{
+    margin-left: 5vw;
+}
+.info .tastes{
+    display: flex;
+    flex-direction: row;
+}
+.tastes .taste{
+    display: flex;
+    flex-direction: row;
+    margin-right: 2vw;
+}
+.taste button{
+    border: 0;
+    border-radius: 10%;
+}
+.taste img{
+    max-width: 2vw;
+    object-fit: cover;
+}
+.info .mybtn{
+    margin-top: 2vh;
+}
+.info .block{
+    margin-top: 2vh;
+    display: grid;
+}
+.block span{
+    flex: 1;
+    overflow: hidden;
+}
+.block .attr{
+    margin-bottom: 1vh;;
+}
+.description{
+    margin: 5vh 40vh 0 0;
+}
+

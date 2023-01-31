@@ -34,7 +34,8 @@ class MainController extends Controller
             return null;
         });
         if($customer != null){
-            if(strcmp($request->input('password'), $customer->password)){
+            if(strcmp($request->input('password'), $customer->password) == 0){
+
                 $request->session()->put('customer_id', $customer->id);
                 return redirect('/');
             }

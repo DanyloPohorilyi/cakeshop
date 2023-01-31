@@ -26,7 +26,13 @@
                 <a class="cart pe-1" href="#">Cart:</a> 0
             </div>
             <div class="d-flex ms-3">
-                <a href="{{ url('/login') }}"><img src="{{ asset('image/icons/326497_account_circle_icon.svg') }}" alt="" width="35px"></a>
+                @if (Session::has('customer_id'))
+                    <a href="{{ url('/customer/'.Session::get('customer_id')) }}"><img src="{{ asset('image/icons/326497_account_circle_icon.svg') }}" alt="" width="50px"></a>
+
+                @else
+                    <a href="{{ url('/login') }}"><img src="{{ asset('image/icons/326497_account_circle_icon.svg') }}" alt="" width="35px"></a>
+
+                @endif
             </div>
             <!--<form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

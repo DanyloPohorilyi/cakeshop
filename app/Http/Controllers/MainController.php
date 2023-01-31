@@ -63,4 +63,10 @@ class MainController extends Controller
         $request->session()->put('customer_id', $customer->id);
         return redirect('/');
     }
+
+    public function customer(Request $request, $customer_id)
+    {
+        $customer = Customer::find($customer_id)->first();
+        return view('main.customer', ['customer' => $customer]);
+    }
 }

@@ -32,6 +32,7 @@ Route::post('/check', [MainController::class, 'checkLogin']);
 Route::post('/addCustomer', [MainController::class, 'checkRegistration']);
 Route::get('/shop/{category?}', [ShopController::class, 'index']);
 Route::get('/shop/{category}/{product_id}', [ShopController::class, 'show']);
+Route::get('/customer/{customer_id}', [MainController::class, 'customer']);
 Route::post('/shop/{category}/{product_id}', [ShopController::class, 'store']);
 Route::prefix('admin')->group(function ()
 {
@@ -42,5 +43,5 @@ Route::prefix('admin')->group(function ()
     Route::resource('confectionery', ConfectioneryController::class);
     Route::resource('taste', TasteController::class);
     Route::resource('customer', CustomerController::class);
-});
+})->middleware('myauth');
 
